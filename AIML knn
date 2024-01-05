@@ -8,7 +8,7 @@ from sklearn import metrics
 
 names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'Class']
 
-# Read dataset to pandas dataframe
+
 dataset = pd.read_csv("dataset/8-dataset.csv", names=names)
 X = dataset.iloc[:, :-1]  
 y = dataset.iloc[:, -1]
