@@ -21,19 +21,19 @@ inputlayer_neurons = 2
 hiddenlayer_neurons = 3   
 output_neurons = 1        
 
-#weight and bias initialization
+
 wh=np.random.uniform(size=(inputlayer_neurons,hiddenlayer_neurons))
 wout=np.random.uniform(size=(hiddenlayer_neurons,output_neurons))
 
-#draws a random range of numbers uniformly of dim x*y
+
 for i in range(epoch):
-    #Forward Propogation
+    
     hlayer_sum=np.dot(X,wh)
     hlayer_act = sigmoid(hinp)    
     output_sum=np.dot(hlayer_act,wout)
     output_act = sigmoid(outinp)  
     
-    #Backpropagation
+    
     EO = y-output_act
     outgrad = derivatives_sigmoid(output_act)
     d_output = EO * outgrad
